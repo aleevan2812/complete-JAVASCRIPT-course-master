@@ -251,3 +251,98 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+console.log(0.1 + 0.2 == 0.3);
+
+// COnvertion
+console.log(Number('20'));
+console.log(+'20');
+
+// Parsing
+console.log(Number.parseInt('30px', 10));
+console.log(Number.parseInt('30px', 10));
+
+console.log(Number.parseInt(' 2.5 rem'));
+console.log(Number.parseFloat(' 2.5 rem'));
+
+// Check if value is NaN
+console.log(Number.isNaN(20));
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20z'));
+console.log(Number.isNaN(20 / 0));
+console.log(20 / 0);
+
+// Checking if value is number
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(+'20a'));
+console.log(Number.isFinite(20 / 0));
+
+console.log(Number.isInteger(20));
+console.log(Number.isInteger('20'));
+console.log(Number.isInteger(+'20a'));
+console.log(Number.isInteger(20 / 0));
+
+// Math
+const randomInt = (min, max) =>
+  Math.trunc(Math.random() * (max - min) + 1) + min;
+// min -> max
+console.log(randomInt(2, 4));
+
+// Rounding integers
+/* Math.round() - Math.floor() - Math.ceil() - Math.trunc()*/
+
+// Rounding decimals toFixed() -> string
+console.log((2.7).toFixed(0));
+console.log((2.7).toFixed(3));
+console.log((2.789).toFixed(2));
+console.log(+(2.789).toFixed(2));
+
+// Numberic separator
+const diameter = 287_460_000_000;
+console.log(diameter);
+
+const price = 345_99;
+console.log(price);
+
+const PI = 3.1415; // error 3.1_415
+console.log(PI);
+
+console.log(Number('230_000'));
+console.log(parseInt('230_000'));
+
+// Date
+console.log('------ Date -------');
+const now = new Date();
+console.log(now);
+console.log(new Date('Aug 02 2020 18:20:10'));
+console.log('December 24, 2015');
+
+console.log(new Date(2037, 10, 19, 12, 11, 10));
+console.log(new Date(2037, 12, 12));
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// Working with Date
+const future = new Date(2037, 10, 19, 12, 11, 10);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+console.log(+future);
+console.log(new Date(2142220270000));
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
+
+const calcDaysPassed = (date1, date2) =>
+  (date2 - date1) / (1000 * 60 * 60 * 24);
+console.log(calcDaysPassed(Date.now(), +future));

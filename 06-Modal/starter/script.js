@@ -18,6 +18,7 @@ const closeModal = () => {
 
 // Open Modal
 btnsOpenModal.forEach(function (btnOpenModal) {
+  console.log('btn ope modal');
   btnOpenModal.addEventListener('click', openModal);
 });
 

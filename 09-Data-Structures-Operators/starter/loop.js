@@ -68,8 +68,8 @@ for (const [i, el] of menu.entries()) {
 }
 
 // NOT optional Chaining
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon);
+if (restaurant.openingHours && restaurant.openingHours.thu)
+  console.log(restaurant.openingHours.thu);
 
 // console.log(restaurant.openingHours.mon.open);
 // With Optional Chaining
@@ -79,7 +79,7 @@ console.log(restaurant.openingHours?.fri?.open);
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? 'close';
-  // console.log(`On ${day}, we open at ${open}`);
+  console.log(`On ${day}, we open at ${open}`);
 }
 
 // Methods
@@ -208,6 +208,7 @@ console.log(avg);
 
 // 3
 for (const [team, odd] of Object.entries(game.odds)) {
+  // Object.entries(game.odds)
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr}: ${odd}`);
 }
